@@ -7,6 +7,8 @@ opt.relativenumber = true
 opt.number = true
 opt.scrolloff = 999
 
+
+opt.spell = true
 --tabs
 
 opt.tabstop = 4
@@ -14,8 +16,8 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
---idk i might undo this one
 opt.wrap = false
+opt.conceallevel = 0
 
 --search
 opt.cursorline = true

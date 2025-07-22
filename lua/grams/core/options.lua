@@ -28,3 +28,12 @@ opt.clipboard:append("unnamedplus")
 -- turn off the swapfile but keep buffers
 opt.swapfile = false
 opt.hidden = true
+
+--
+local filetype = vim.filetype
+
+filetype.add({
+    extension = {
+        cmd = "rexx",
+    }
+})

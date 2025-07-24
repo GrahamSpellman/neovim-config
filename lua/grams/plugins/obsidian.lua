@@ -23,11 +23,11 @@ return {
         workspaces = {
             {
                 name = "grams",
-                path = "~/repos/obsidian/grams-obsidian-vault/"
+                path = "~/obsidian/grams-obsidian-vault/"
             },
             {
                 name = "PhreakeD",
-                path = "~/repos/obsidian/phd-notes/"
+                path = "~/obsidian/phd-notes/"
             }
         },
         ui = {

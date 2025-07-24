@@ -8,5 +8,13 @@ return
       require("telescope").setup({})
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+
+      require("telescope").load_extension "pomodori"
+            vim.keymap.set("n", "<leader>pt",
+            function()
+                require("telescope").extensions.pomodori.timers()
+            end,
+            { desc = "Manage Pomodori Timers"})
+
     end
   }

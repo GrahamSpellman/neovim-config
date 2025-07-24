@@ -1,37 +1,71 @@
-return {
-  "epwalsh/obsidian.nvim",
-  version = "*",  -- recommended, use latest release instead of latest commit
-  lazy = true,
-  ft = "markdown",
-  -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-  -- event = {
-  --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-  --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-  --   -- refer to `:h file-pattern` for more examples
-  --   "BufReadPre path/to/my-vault/*.md",
-  --   "BufNewFile path/to/my-vault/*.md",
-  -- },
-  dependencies = {
-    -- Required.
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim",
-    "nvim-treesitter/nvim-treesitter",
-    "saghen/blink.cmp"
-    -- see below for full list of optional dependencies 👇
-  },
-  opts = {
-        workspaces = {
-            {
-                name = "grams",
-                path = "~/obsidian/grams-obsidian-vault/"
-            },
-            {
-                name = "PhreakeD",
-                path = "~/obsidian/phd-notes/"
-            }
+return
+    {
+        "obsidian-nvim/obsidian.nvim",
+        version = "*",  -- recommended, use latest release instead of latest commit
+        lazy = true,
+        ft = "markdown",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "saghen/blink.cmp",
         },
-        ui = {
-            enable = false
+        opts = {
+            workspaces = {
+                {
+                    name = "grams-obsidian-vault",
+                    path = "~/obsidian/grams-obsidian-vault/"
+                },
+                {
+                    name = "phd-notes",
+                    path = "~/obsidian/phd-notes/",
+                    overrides = {
+                        daily_notes = {
+                            folder = "00-narrative/daily",
+                            date_format = "%m-%d-%Y",
+                            default_tags = "daily",
+                        },
+                        templates = {
+                            folder = "05-toolkit/templates",
+                            customizations = {
+                                meeting ={
+                                    note_subdir = "03-backoffice/meetings"
+                                },
+                                email ={
+                                    note_subdir = "03-backoffice/meetings"
+                                },
+                                growth ={
+                                    --note_subdir = "01-chamber
+                                },
+                                people ={
+
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            ui = {
+                enable = false
+            },
+            picker = {
+                -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
+                name = "telescope.nvim",
+                -- Optional, configure key mappings for the picker. These are the defaults.
+                -- Not all pickers support all mappings.
+                note_mappings = {
+                    -- Create a new note from your query.
+                    new = "<C-x>",
+                    -- Insert a link to the selected note.
+                    insert_link = "<C-l>",
+                },
+                tag_mappings = {
+                    -- Add tag(s) to current note.
+                    tag_note = "<C-x>",
+                    -- Insert a tag at the current location.
+                    insert_tag = "<C-l>",
+                },
+            },
         }
-    },
-}
+
+    }

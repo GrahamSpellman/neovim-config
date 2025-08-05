@@ -9,15 +9,17 @@ opt.scrolloff = 999
 
 
 opt.spell = true
---tabs
 
+--tabs
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
 opt.wrap = false
-opt.conceallevel = 0
+opt.conceallevel = 2
+
+-- opt.colorcolumn=100
 
 --search
 opt.cursorline = true

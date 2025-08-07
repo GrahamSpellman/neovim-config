@@ -12,13 +12,13 @@ return
         },
         opts = {
             workspaces = {
-                {
-                    name = "grams",
-                    path = "~/repos/obsidian/grams/"
-                },
+                --{
+                --    name = "grams",
+                --    path = "~/repos/obsidian/grams/"
+                --},
                 {
                     name = "phd-notes",
-                    path = "~/repos/obsidian/phd-notes/",
+                    path = "~/obsidian/phd-notes/",
                     overrides = {
                         daily_notes = {
                             folder = "00-narrative/daily",

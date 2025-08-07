@@ -2,8 +2,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
+    lazy = false,
     dependencies = {
         "windwp/nvim-ts-autotag",
+        "OXY2DEV/markview.nvim",
     },
     config = function()
         -- import nvim-treesitter plugin

@@ -17,7 +17,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 opt.wrap = false
-opt.conceallevel = 2
+opt.conceallevel = 0
 
 -- opt.colorcolumn=100
 

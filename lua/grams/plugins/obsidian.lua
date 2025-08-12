@@ -46,7 +46,7 @@ return
                 }
             },
             ui = {
-                enable = false
+                enable = true 
             },
             picker = {
                 -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
